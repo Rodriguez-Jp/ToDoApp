@@ -7,6 +7,10 @@
     <title>Document</title>
   </head>
   <body class="h-full">
+    <div
+      id="msj-modal"
+      class="p-6 text-center absolute h-40 w-64 top-3 left-3 opacity-0 transition-opacity rounded"
+    ></div>
     <div id="container" class="mx-auto">
       <h2 class="text-center mt-10 text-4xl">Welcome to ToDoApp</h2>
       <div class="max-w-lg mx-auto">
@@ -14,19 +18,26 @@
           <p class="text-center text-xl">Start creating your ToDo's</p>
         </div>
 
-        <form id="formulario" action="#" method="post">
+        <form id="form" action="#" method="post">
           <div class="mt-5">
             <input
               type="text"
               name="todo"
               id="todo-input"
-              placeholder="Escribe tu tarea"
-              class="w-full p-2 rounded border-2 border-slate-600"
+              placeholder="Write your ToDo"
+              class="w-full p-2 rounded border-2 border-slate-600 focus:outline-red-500"
             />
           </div>
+          <input
+            type="submit"
+            value="Add"
+            id="submit-btn"
+            class="w-full mt-4 p-2 bg-red-500 text-white rounded cursor-pointer transition-colors hover:bg-red-600"
+          />
         </form>
-        <div id="todos"></div>
+        <div id="todos" class="mt-10"></div>
       </div>
     </div>
+    <script src="./app.js"></script>
   </body>
 </html>
